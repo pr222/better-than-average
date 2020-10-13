@@ -1,7 +1,7 @@
 /**
  * arrayExtension module.
  *
- * @module src/renameMe
+ * @module src/arrayExtension.js
  * @author Johan Leitet <johan.leitet@lnu.se>
  * @author Mats Loock <mats.loock@lnu.se>
  * @author Pauliina Raitaniemi <pr222ja@student.lnu.se>
@@ -29,8 +29,11 @@
  * or equal to, the average of the points.
  * 
  * @param {Student[]} students - Students to filter.
+ * @throws {TypeError} - Throws 'The passed argument is not an array.' if the argument is not an array.
  * @returns {string[]} The name of the students better than average.
  */
 export function filterBetterThanAverage (students) {
-  // TODO: Write your code here.
+  if (!Array.isArray()) {
+    throw new TypeError('The passed argument is not an array.')
+  }
 }
